@@ -1,224 +1,234 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CineMaster Academy - Curso Profissional de Filmmaking</title>
+    <title>Do CLT ao Videomaker - The step-by-step to your freedom</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
-    <script src="components/navbar.js"></script>
-    <script src="components/footer.js"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        gold: {
-                            500: '#D4AF37',
-                            600: '#C9A227',
-                        },
-                        navy: {
-                            900: '#0A0E17',
-                            800: '#131A26',
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Montserrat', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-navy-900 text-white font-sans">
-    <custom-navbar></custom-navbar>
-    
-    <!-- Hero Section -->
-    <section class="relative h-screen flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 bg-black/60 z-10"></div>
-        <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover">
-            <source src="http://static.photos/black/1200x630/5" type="video/mp4">
-        </video>
-        
-        <div class="container mx-auto px-6 z-20 text-center">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6 text-gold-500">Transforme sua paixão por vídeos em uma carreira profissional</h1>
-            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Aprenda filmagem, edição e narrativa cinematográfica com um profissional do mercado</p>
-            <button class="bg-gold-500 hover:bg-gold-600 text-navy-900 font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
-                Garantir minha vaga agora
-            </button>
-        </div>
-    </section>
 
-    <!-- What You'll Learn -->
-    <section class="py-20 bg-navy-800" id="aprender">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center text-gold-500">O que você vai aprender</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Card 1 -->
-                <div class="bg-navy-900 p-8 rounded-lg shadow-xl border border-gold-500/20 hover:border-gold-500/50 transition-all">
-                    <div class="text-gold-500 mb-4">
-                        <i data-feather="video" class="w-12 h-12"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">Filmagem profissional</h3>
-                    <p class="text-gray-300">Domine câmeras profissionais e smartphones para capturar imagens cinematográficas.</p>
-                </div>
-                
-                <!-- Card 2 -->
-                <div class="bg-navy-900 p-8 rounded-lg shadow-xl border border-gold-500/20 hover:border-gold-500/50 transition-all">
-                    <div class="text-gold-500 mb-4">
-                        <i data-feather="sun" class="w-12 h-12"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">Iluminação cinematográfica</h3>
-                    <p class="text-gray-300">Técnicas profissionais de iluminação para criar atmosferas cinematográficas.</p>
-                </div>
-                
-                <!-- Card 3 -->
-                <div class="bg-navy-900 p-8 rounded-lg shadow-xl border border-gold-500/20 hover:border-gold-500/50 transition-all">
-                    <div class="text-gold-500 mb-4">
-                        <i data-feather="sliders" class="w-12 h-12"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">Edição e color grading</h3>
-                    <p class="text-gray-300">Edição profissional, correção de cor e efeitos visuais para um resultado cinema.</p>
-                </div>
-                
-                <!-- Card 4 -->
-                <div class="bg-navy-900 p-8 rounded-lg shadow-xl border border-gold-500/20 hover:border-gold-500/50 transition-all">
-                    <div class="text-gold-500 mb-4">
-                        <i data-feather="book" class="w-12 h-12"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">Narrativa visual</h3>
-                    <p class="text-gray-300">Storytelling poderoso para contar histórias através da linguagem cinematográfica.</p>
-                </div>
-                
-                <!-- Card 5 -->
-                <div class="bg-navy-900 p-8 rounded-lg shadow-xl border border-gold-500/20 hover:border-gold-500/50 transition-all">
-                    <div class="text-gold-500 mb-4">
-                        <i data-feather="mic" class="w-12 h-12"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">Captação de áudio</h3>
-                    <p class="text-gray-300">Técnicas profissionais de captação e edição de áudio para produções imersivas.</p>
-                </div>
-                
-                <!-- Card 6 -->
-                <div class="bg-navy-900 p-8 rounded-lg shadow-xl border border-gold-500/20 hover:border-gold-500/50 transition-all">
-                    <div class="text-gold-500 mb-4">
-                        <i data-feather="upload" class="w-12 h-12"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">Exportação profissional</h3>
-                    <p class="text-gray-300">Formatos, codecs e técnicas para entregar conteúdo profissional para clientes e plataformas.</p>
-                </div>
-            </div>
-            
-            <div class="text-center mt-16">
-                <button class="bg-gold-500 hover:bg-gold-600 text-navy-900 font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
-                    Quero dominar essas técnicas
-                </button>
-            </div>
+<body class="bg-black font-poppins text-white">
+    <custom-navbar></custom-navbar>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center text-center overflow-hidden">
+        <picture class="absolute inset-0 w-full h-full">
+            <!-- Imagem para celular (vertical) -->
+            <source media="(max-width: 767px)" srcset="img/STORY.jpg">
+            <!-- Imagem para tablets -->
+            <source media="(max-width: 1023px)" srcset="img/720-X-1040.jpg">
+            <!-- Imagem para desktop -->
+            <img src="img/1920-X-640-2.jpg" alt="Do CLT ao Videomaker"
+                class="w-full h-full object-cover md:object-fill lg:object-cover">
+        </picture>
+
+        <!-- Overlay escuro -->
+        <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+
+        <!-- Conteúdo -->
+        <div class="relative z-10 px-4">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 text-gold-500 leading-tight">
+                Do <span class="text-white">CLT</span> ao <span class="text-gold-500">Videomaker</span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto text-white">
+                O passo a passo para sua liberdade criativa e financeira
+            </p>
+            <a href="#offer"
+                class="bg-gold-500 hover:bg-gold-600 text-black font-bold py-3 px-8 rounded-full text-lg transition-all transform hover:scale-105 shadow-lg inline-block">
+                Garanta sua vaga agora
+            </a>
         </div>
     </section>
 
     <!-- Video Section -->
-    <section class="py-20 bg-navy-900" id="mentor">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center text-gold-500">Assista ao trailer do curso</h2>
-            
-            <div class="max-w-4xl mx-auto aspect-video bg-black rounded-xl overflow-hidden shadow-2xl">
-                <iframe class="w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <section class="py-20 px-4 bg-navy-900" id="video">
+        <div class="max-w-4xl mx-auto border-2 border-gold-500 rounded-lg p-8 shadow-2xl">
+
+            <h3 class="text-2xl sm:text-3xl md:text-4xl text-center mt-2 mb-6 text-gold-500 font-bold leading-snug textvideo">
+                Assista como você pode transformar sua carreira
+            </h3>
+
+            <div class="aspect-video bg-black rounded-xl overflow-hidden mb-10">
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed/tgbNymZ7vqY" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
             </div>
-            
-            <div class="text-center mt-12">
-                <button class="bg-gold-500 hover:bg-gold-600 text-navy-900 font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
-                    Quero aprender agora
-                </button>
+
+            <div class="text-center mt-10">
+                <a href="#offer"
+                    class="bg-gold-500 hover:bg-gold-600 text-navy-900 font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg inline-block">
+                    Quero começar agora
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- About the Author -->
-    <section class="py-20 bg-navy-800">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col lg:flex-row items-center gap-12">
-                <div class="lg:w-1/2">
-                    <img src="http://static.photos/people/640x360/10" alt="Instrutor do Curso" class="rounded-xl shadow-2xl w-full">
+    <!-- What You'll Learn -->
+    <section class="py-20 px-4 bg-dark-blue-500" id="aprender">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl text-center mb-12">O que você vai aprender</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="flex items-start">
+                    <i data-feather="check-circle" class="text-gold-500 mr-4 mt-1"></i>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Como encontrar seus primeiros clientes</h3>
+                        <p class="text-gray-300">Estratégias comprovadas para conseguir projetos mesmo sem experiência.
+                        </p>
+                    </div>
                 </div>
-                
-                <div class="lg:w-1/2">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gold-500">Conheça seu mentor</h2>
-                    <p class="text-xl mb-4">Alef</p>
-                    <p class="text-gray-300 mb-6">Diretor e cineasta com mais de 15 anos de experiência no mercado audiovisual. Já trabalhou em produções para Netflix, Globo e grandes marcas internacionais.</p>
-                    
-                    <ul class="space-y-3 text-gray-300 mb-8">
-                        <li class="flex items-start">
-                            <i data-feather="award" class="text-gold-500 mr-2 mt-1"></i>
-                            <span>Diretor de 5 longas-metragens premiados internacionalmente</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i data-feather="film" class="text-gold-500 mr-2 mt-1"></i>
-                            <span>Mais de 100 comerciais produzidos para grandes marcas</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i data-feather="star" class="text-gold-500 mr-2 mt-1"></i>
-                            <span>Professor convidado em grandes festivais de cinema</span>
-                        </li>
-                    </ul>
-                    
-                    <button class="bg-gold-500 hover:bg-gold-600 text-navy-900 font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
-                        Aprenda com quem vive o audiovisual
-                    </button>
+                <div class="flex items-start">
+                    <i data-feather="check-circle" class="text-gold-500 mr-4 mt-1"></i>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Como criar um portfólio impressionante</h3>
+                        <p class="text-gray-300">Mesmo sem ter trabalhos profissionais para mostrar.</p>
+                    </div>
                 </div>
+                <div class="flex items-start">
+                    <i data-feather="check-circle" class="text-gold-500 mr-4 mt-1"></i>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Como fazer a transição do CLT com segurança</h3>
+                        <p class="text-gray-300">Planejamento financeiro e estratégias para minimizar riscos.</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <i data-feather="check-circle" class="text-gold-500 mr-4 mt-1"></i>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Como se posicionar no mercado</h3>
+                        <p class="text-gray-300">Diferenciação e precificação para ganhar mais trabalhando menos.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#offer"
+                    class="bg-gold-500 hover:bg-gold-600 text-black font-bold py-3 px-8 rounded-full text-lg inline-block transition-all transform hover:scale-105">
+                    Quero minha vaga
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Author -->
+    <section class="py-20 px-4" id="autor">
+        <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div class="rounded-lg overflow-hidden shadow-xl">
+                <img src="http://static.photos/people/640x360/10" alt="Instrutor" class="w-full h-auto">
+            </div>
+            <div>
+                <h2 class="text-3xl font-bold mb-6">Conheça quem já vive isso</h2>
+                <p class="text-lg mb-4">Meu nome é Rodrigo, e eu já estive exatamente onde você está agora. Trabalhava
+                    10 horas por dia em um escritório, sonhando com liberdade criativa e financeira.</p>
+                <p class="text-lg mb-4">Hoje, vivo da minha paixão por vídeos, trabalho com grandes marcas e tenho total
+                    controle do meu tempo e da minha vida.</p>
+                <p class="text-lg mb-6">Neste curso, vou te mostrar exatamente o caminho que percorri, com todos os
+                    acertos e erros, para que você possa chegar lá muito mais rápido.</p>
+                <a href="#offer"
+                    class="bg-gold-500 hover:bg-gold-600 text-black font-bold py-3 px-8 rounded-full text-lg inline-block transition-all transform hover:scale-105">
+                    Quero ter liberdade
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Final Offer -->
-    <section class="py-20 bg-gradient-to-r from-navy-900 to-gold-500/10" id="oferta">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gold-500">Seu acesso ao curso CineMaster</h2>
-            
-            <div class="max-w-2xl mx-auto bg-navy-800 rounded-xl p-8 shadow-2xl border border-gold-500/30">
-                <p class="text-xl mb-6">De <span class="line-through">R$ 1.997</span> por apenas</p>
-                <p class="text-5xl font-bold mb-6 text-gold-500">R$ 497</p>
-                <p class="text-lg mb-6">ou 12x de R$ 49,90 no cartão</p>
-                
-                <ul class="space-y-3 text-left mb-8 max-w-md mx-auto">
-                    <li class="flex items-start">
-                        <i data-feather="check" class="text-gold-500 mr-2 mt-1"></i>
-                        <span>Acesso vitalício a todas as aulas e materiais</span>
-                    </li>
-                    <li class="flex items-start">
-                        <i data-feather="check" class="text-gold-500 mr-2 mt-1"></i>
-                        <span>Certificado de conclusão reconhecido no mercado</span>
-                    </li>
-                    <li class="flex items-start">
-                        <i data-feather="check" class="text-gold-500 mr-2 mt-1"></i>
-                        <span>Comunidade exclusiva de alunos</span>
-                    </li>
-                    <li class="flex items-start">
-                        <i data-feather="check" class="text-gold-500 mr-2 mt-1"></i>
-                        <span>7 dias de garantia incondicional</span>
-                    </li>
-                </ul>
-                
-                <button class="bg-gold-500 hover:bg-gold-600 text-navy-900 font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+    <section id="offer" class="py-20 px-4 bg-dark-blue-900">
+        <div class="max-w-2xl mx-auto border-2 border-gold-500 rounded-xl p-8">
+            <h2 class="text-3xl text-gold-500 font-bold text-center mb-4">Seu acesso ao curso Do CLT ao Videomaker</h2>
+            <p class="text-center text-white mb-8">De R$197 por apenas</p>
+
+            <div class="text-center mb-8">
+                <span class="text-6xl font-bold text-gold-500">R$97</span>
+                <p class="text-white mt-2">ou 12x de R$9,90 no cartão</p>
+            </div>
+
+            <ul class="space-y-3 mb-8">
+                <li class="flex items-center">
+                    <i data-feather="check" class="text-gold-500 mr-3"></i>
+                    <span>Acesso vitalício a todos os materiais</span>
+                </li>
+                <li class="flex items-center">
+                    <i data-feather="check" class="text-gold-500 mr-3"></i>
+                    <span>Certificado de conclusão reconhecido no mercado</span>
+                </li>
+                <li class="flex items-center">
+                    <i data-feather="check" class="text-gold-500 mr-3"></i>
+                    <span>Comunidade exclusiva de alunos</span>
+                </li>
+                <li class="flex items-center">
+                    <i data-feather="check" class="text-gold-500 mr-3"></i>
+                    <span>Garantia incondicional de 7 dias</span>
+                </li>
+            </ul>
+
+            <div class="text-center mb-6">
+                <a href="#"
+                    class="bg-gold-500 hover:bg-dark-blue-500 hover:text-white text-black font-bold py-4 px-12 rounded-full text-lg inline-block transition-all duration-300 w-full">
                     Comprar agora
-                </button>
-                
-                <p class="mt-6 text-sm text-gold-500/80">Vagas limitadas - Garanta seu acesso hoje mesmo</p>
-                <p class="mt-2 text-sm text-gray-400">Pagamento 100% seguro</p>
+                </a>
+            </div>
+
+            <div class="text-center text-sm">
+                <p class="text-gold-500 mb-1">Vagas limitadas - Garanta seu acesso hoje</p>
+                <p class="text-white">Pagamento 100% seguro</p>
+            </div>
+
+            <div class="flex justify-center mt-6 space-x-6">
+                <i data-feather="credit-card" class="text-white"></i>
+                <i data-feather="dollar-sign" class="text-white"></i>
+                <i data-feather="bar-chart-2" class="text-white"></i>
             </div>
         </div>
     </section>
 
-    <custom-footer></custom-footer>
-    
+    <!-- Footer -->
+    <footer class="bg-black py-12 px-4 border-t border-dark-blue-900">
+        <div class="max-w-4xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-2xl font-bold text-gold-500">Do CLT ao Videomaker</h3>
+                    <p class="text-gray-400 mt-2">Sua jornada para a liberdade criativa e financeira</p>
+                </div>
+                <a href="#offer"
+                    class="bg-gold-500 hover:bg-gold-600 text-black font-bold py-3 px-8 rounded-full text-lg transition-all transform hover:scale-105">
+                    Garanta sua vaga
+                </a>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 mb-4 md:mb-0">© 2025 Do CLT ao Videomaker. Todos os direitos reservados.</p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-gold-500">Política de Privacidade</a>
+                        <a href="#" class="text-gray-400 hover:text-gold-500">Termos de Uso</a>
+                        <a href="#" class="text-gray-400 hover:text-gold-500">Suporte</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="components/navbar.js"></script>
     <script>
         feather.replace();
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'gold-500': '#D4AF37',
+                        'dark-blue-500': '#0A0E17',
+                        'dark-blue-900': '#0A1A2F',
+                    }
+                }
+            }
+        }
     </script>
 </body>
+
 </html>
