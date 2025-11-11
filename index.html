@@ -19,22 +19,24 @@
     <custom-navbar></custom-navbar>
 
     <!-- Hero Section -->
-    <section class="relative h-screen flex items-center justify-center text-center overflow-hidden">
-        <picture class="absolute inset-0 w-full h-full">
-            <!-- Imagem para celular (vertical) -->
+    <section class="relative flex flex-col md:h-screen text-center overflow-hidden bg-[#0A0E17] md:bg-transparent">
+
+        <!-- IMAGEM (visível no mobile, fundo no desktop) -->
+        <picture class="w-full md:absolute md:inset-0 md:w-full md:h-full">
+            <!-- Mobile (imagem visível acima do texto) -->
             <source media="(max-width: 767px)" srcset="img/STORY.jpg">
-            <!-- Imagem para tablets -->
+            <!-- Tablet -->
             <source media="(max-width: 1023px)" srcset="img/720-X-1040.jpg">
-            <!-- Imagem para desktop -->
+            <!-- Desktop -->
             <img src="img/1920-X-640-2.jpg" alt="Do CLT ao Videomaker"
-                class="w-full h-full object-cover md:object-fill lg:object-cover">
+                class="w-full md:w-full h-auto md:h-full object-cover md:object-center md:object-cover">
         </picture>
 
-        <!-- Overlay escuro -->
-        <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+        <!-- Overlay escuro só no desktop -->
+        <div class="hidden md:block absolute inset-0 bg-black bg-opacity-60"></div>
 
-        <!-- Conteúdo -->
-        <div class="relative z-10 px-4">
+        <!-- CONTEÚDO -->
+        <div class="relative z-10 flex flex-col justify-center items-center px-4 py-12 md:py-0 md:h-full">
             <h1 class="text-4xl md:text-6xl font-bold mb-6 text-gold-500 leading-tight">
                 Do <span class="text-white">CLT</span> ao <span class="text-gold-500">Videomaker</span>
             </h1>
@@ -52,11 +54,12 @@
     <section class="py-20 px-4 bg-navy-900" id="video">
         <div class="max-w-4xl mx-auto border-2 border-gold-500 rounded-lg p-8 shadow-2xl">
 
-            <h3 class="text-2xl sm:text-3xl md:text-4xl text-center mt-2 mb-6 text-gold-500 font-bold leading-snug textvideo">
+            <h3
+                class="text-2xl sm:text-3xl md:text-4xl text-center mt-2 mb-6 text-gold-500 font-bold leading-snug textvideo">
                 Assista como você pode transformar sua carreira
             </h3>
 
-            <div class="aspect-video bg-black rounded-xl overflow-hidden mb-10">
+            <div class="aspect-video bg-black rounded-xl overflow-hidden mb-10 video-container">
                 <iframe class="w-full h-full" src="https://www.youtube.com/embed/tgbNymZ7vqY" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen>

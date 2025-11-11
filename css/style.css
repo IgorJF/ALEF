@@ -30,6 +30,14 @@ section.relative.h-screen {
     background-color: #131A26;
 }
 
+#autor{
+    background-color: #0A0E17;
+}
+
+footer{
+    background-color: #0A0E17 !important;
+}
+
 .aspect-w-16.aspect-h-9 iframe {
     position: absolute;
     top: 0;
@@ -74,3 +82,38 @@ section.relative.h-screen {
         font-size: 1.2rem;
     }
 }
+
+@media (max-width: 767px) {
+  section.relative {
+    background-color: #131A26; /* fundo azul escuro padrão */
+  }
+
+  section.relative picture img {
+    display: block;
+  }
+}
+
+ @media (max-width: 768px) {
+    #video {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+
+    #video .video-container {
+      margin: 0 auto;
+      width: 100%;
+      height: 70vh; /* aumenta bastante o vídeo no mobile */
+      aspect-ratio: unset; /* remove o limite 16:9 para permitir mais altura */
+    }
+
+    #video iframe {
+      height: 100%;
+      width: 100%;
+      border-radius: 0.75rem;
+    }
+
+    #video h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+  }
