@@ -1,91 +1,106 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 body {
-    font-family: 'Poppins', sans-serif;
-    scroll-behavior: smooth;
-    margin: 0;
-    padding: 0;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
 }
 
-html, body {
+html,
+body {
   overflow-x: hidden;
 }
 
 /* Hero section adjustments */
 section.relative.h-screen {
-    min-height: calc(100vh - 70px);
-    margin-top: 70px;
+  min-height: calc(100vh - 70px);
+  margin-top: 70px;
 }
 
 /* Video container */
 .aspect-w-16.aspect-h-9 {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 aspect ratio */
 }
 
 #video {
-    background-color: #0A0E17;
+  background-color: #0A0E17;
 }
 
 #aprender {
-    background-color: #131A26;
+  background-color: #131A26;
 }
 
-#autor{
-    background-color: #0A0E17;
+#autor {
+  background-color: #0A0E17;
 }
 
-footer{
-    background-color: #0A0E17 !important;
+footer {
+  background-color: #0A0E17 !important;
 }
 
 .aspect-w-16.aspect-h-9 iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
+
 /* Animation classes */
 .fade-in {
-    animation: fadeIn 1.5s ease-in-out;
+  animation: fadeIn 1.5s ease-in-out;
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 /* Custom gold gradient text */
 .text-gold-gradient {
-    background: linear-gradient(90deg, #D4AF37, #FEE140);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+  background: linear-gradient(90deg, #D4AF37, #FEE140);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 /* Custom gold border glow */
 .gold-glow {
-    box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    .hero-title {
-        font-size: 2.5rem;
-    }
-    
-    .textvideo{
-        font-size: 1rem;
-    }
+  .hero-title {
+    font-size: 2.5rem;
+  }
 
-    .hero-subtitle {
-        font-size: 1.2rem;
-    }
+  .textvideo {
+    font-size: 1rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  footer p,
+  footer h3 {
+    text-align: center;
+  }
+
 }
 
 @media (max-width: 767px) {
   section.relative {
-    background-color: #131A26; /* fundo azul escuro padrão */
+    background-color: #131A26;
   }
 
   section.relative picture img {
@@ -93,27 +108,29 @@ footer{
   }
 }
 
- @media (max-width: 768px) {
-    #video {
-      padding-top: 4rem;
-      padding-bottom: 4rem;
-    }
-
-    #video .video-container {
-      margin: 0 auto;
-      width: 100%;
-      height: 70vh; /* aumenta bastante o vídeo no mobile */
-      aspect-ratio: unset; /* remove o limite 16:9 para permitir mais altura */
-    }
-
-    #video iframe {
-      height: 100%;
-      width: 100%;
-      border-radius: 0.75rem;
-    }
-
-    #video h3 {
-      font-size: 1.5rem;
-      margin-bottom: 1.5rem;
-    }
+@media (max-width: 768px) {
+  #video {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
+
+  #video .video-container {
+    margin: 0 auto;
+    width: 100%;
+    height: 70vh;
+    /* aumenta bastante o vídeo no mobile */
+    aspect-ratio: unset;
+    /* remove o limite 16:9 para permitir mais altura */
+  }
+
+  #video iframe {
+    height: 100%;
+    width: 100%;
+    border-radius: 0.75rem;
+  }
+
+  #video h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}

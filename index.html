@@ -13,6 +13,7 @@
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/whatsapp-button.css">
 </head>
 
 <body class="bg-black font-poppins text-white">
@@ -21,10 +22,9 @@
     <!-- Hero Section -->
     <section class="relative flex flex-col md:h-screen text-center overflow-hidden bg-[#0A0E17] md:bg-transparent">
 
-        <!-- IMAGEM (visível no mobile, fundo no desktop) -->
         <picture class="w-full md:absolute md:inset-0 md:w-full md:h-full">
-            <!-- Mobile (imagem visível acima do texto) -->
-            <source media="(max-width: 767px)" srcset="img/STORY.jpg">
+            <!-- Mobile -->
+            <source media="(max-width: 767px)" srcset="img/720-X-1040.jpg">
             <!-- Tablet -->
             <source media="(max-width: 1023px)" srcset="img/720-X-1040.jpg">
             <!-- Desktop -->
@@ -32,7 +32,6 @@
                 class="w-full md:w-full h-auto md:h-full object-cover md:object-center md:object-cover">
         </picture>
 
-        <!-- Overlay escuro só no desktop -->
         <div class="hidden md:block absolute inset-0 bg-black bg-opacity-60"></div>
 
         <!-- CONTEÚDO -->
@@ -127,7 +126,8 @@
             </div>
             <div>
                 <h2 class="text-3xl font-bold mb-6">Conheça quem já vive isso</h2>
-                <p class="text-lg mb-4">Meu nome é Rodrigo, e eu já estive exatamente onde você está agora. Trabalhava
+                <p class="text-lg mb-4">Meu nome é Alef Almeida, e eu já estive exatamente onde você está agora.
+                    Trabalhava
                     10 horas por dia em um escritório, sonhando com liberdade criativa e financeira.</p>
                 <p class="text-lg mb-4">Hoje, vivo da minha paixão por vídeos, trabalho com grandes marcas e tenho total
                     controle do meu tempo e da minha vida.</p>
@@ -141,15 +141,28 @@
         </div>
     </section>
 
-    <!-- Final Offer -->
     <section id="offer" class="py-20 px-4 bg-dark-blue-900">
         <div class="max-w-2xl mx-auto border-2 border-gold-500 rounded-xl p-8">
-            <h2 class="text-3xl text-gold-500 font-bold text-center mb-4">Seu acesso ao curso Do CLT ao Videomaker</h2>
-            <p class="text-center text-white mb-8">De R$197 por apenas</p>
 
-            <div class="text-center mb-8">
-                <span class="text-6xl font-bold text-gold-500">R$97</span>
-                <p class="text-white mt-2">ou 12x de R$9,90 no cartão</p>
+            <h2 class="text-2xl text-gold-500 font-bold text-center mb-4">Seu acesso ao curso Do CLT ao Videomaker</h2>
+
+            <p class="text-center text-white mb-3 text-3xl font-semibold">
+                De <s class="text-gold-900 opacity-80 text-4xl">R$197</s> por apenas
+            </p>
+
+            <div class="text-center mb-8 bg-dark-blue-800 border border-gold-500 rounded-xl py-6 px-4">
+
+                <span class="text-6xl font-extrabold text-gold-500">
+                    R$97
+                </span>
+
+                <p class="text-white mt-3 text-2xl font-semibold">
+                    ou 12x de <span class="text-gold-500 font-bold">R$10,03</span> no cartão
+                </p>
+
+                <p class="text-red-400 font-bold mt-3 animate-pulse">
+                    Valor por tempo limitado
+                </p>
             </div>
 
             <ul class="space-y-3 mb-8">
@@ -188,6 +201,7 @@
                 <i data-feather="dollar-sign" class="text-white"></i>
                 <i data-feather="bar-chart-2" class="text-white"></i>
             </div>
+
         </div>
     </section>
 
@@ -210,13 +224,19 @@
                     <p class="text-gray-400 mb-4 md:mb-0">© 2025 Do CLT ao Videomaker. Todos os direitos reservados.</p>
                     <div class="flex space-x-6">
                         <a href="#" class="text-gray-400 hover:text-gold-500">Política de Privacidade</a>
+                        <a href="https://wa.me/55999882696" class="text-gray-400 hover:text-gold-500">Suporte</a>
                         <a href="#" class="text-gray-400 hover:text-gold-500">Termos de Uso</a>
-                        <a href="#" class="text-gray-400 hover:text-gold-500">Suporte</a>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
+
+    <a href="https://wa.me/55999882696" class="whatsapp-floating" target="_blank" aria-label="Whatsapp">
+        <img src="img/whatsapp-icon.png" alt="WhatsApp" />
+    </a>
+
+
     <script src="components/navbar.js"></script>
     <script>
         feather.replace();
