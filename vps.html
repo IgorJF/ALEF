@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do CLT ao Videomaker - Sua Liberdade Começa Aqui</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/whatsapp-button.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'gold-500': '#D4AF37',
+                        'dark-blue-500': '#0A0E17',
+                        'dark-blue-900': '#0A1A2F',
+                        'navy-900': '#0A0E17',
+                        'gold-900': '#8B6A00',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Estilos base do VPS */
+        #content-locked {
+            display: none;
+        }
+
+        #cta-initial {
+            background-color: #D4AF37;
+            color: black;
+            font-weight: bold;
+            padding: 1rem 2rem;
+            border-radius: 9999px;
+            text-align: center;
+            display: inline-block;
+            transition: all 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+            margin-top: 1.5rem;
+        }
+
+        #cta-initial:hover {
+            background-color: #FEE140;
+            transform: scale(1.05);
+        }
+
+        .vps-video::-webkit-media-controls-timeline,
+        .vps-video::-webkit-media-controls-current-time-display,
+        .vps-video::-webkit-media-controls-time-remaining-display {
+            display: none !important;
+        }
+
+        .vps-video::-moz-range-track,
+        .vps-video::-moz-range-thumb,
+        .vps-video::-ms-track {
+            display: none !important;
+        }
+
+        #video {
+            background-color: #0A0E17;
+        }
+
+        .textvideo {
+            font-size: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .textvideo {
+                font-size: 2.25rem;
+            }
+        }
+
+        /* 🎯 AJUSTE FINAL DA IMAGEM E ESPAÇAMENTO */
+
+        /* 1. Aumentar a Altura Mínima da Hero Section no Mobile */
+        #hero-vps {
+            /* Manter o padding reduzido */
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+            /* Aumenta a altura mínima para dar mais espaço à imagem horizontal */
+            min-height: 500px;
+            /* Alterado de 400px para 500px */
+            justify-content: center;
+        }
+
+        .hero-background-picture {
+            object-fit: contain !important;
+            object-position: center !important;
+            background-color: #0A0E17;
+        }
+
+        @media (max-width: 767px) {
+            .hero-background-picture {
+                object-fit: contain;
+                object-position: center;
+                background-color: #0A0E17;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .hero-background-picture {
+                object-fit: cover;
+                /* mantém bonito no desktop */
+                object-position: center;
+            }
+        }
+
+
+        /* 3. Ajuste de PADDING da Seção do Vídeo (mantido) */
+        #video {
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        }
+
+        @media (min-width: 768px) {
+            #video {
+                padding-top: 4rem;
+                padding-bottom: 4rem;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-black font-poppins text-white">
+
+    <section id="hero-vps" class="flex flex-col items-center text-center bg-[#0A0E17] py-8 px-4">
+
+        <!-- IMAGEM EM CIMA -->
+        <picture class="w-full">
+            <source media="(max-width: 767px)" srcset="img/1920-X-640-2.jpg">
+            <source media="(max-width: 1023px)" srcset="img/1920-X-640-2.jpg">
+            <img src="img/1920-X-640-2.jpg" class="w-full hero-background-picture">
+        </picture>
+
+        <!-- TEXTO EMBAIXO -->
+        <div class="flex flex-col justify-center items-center mt-6">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 text-gold-500 leading-tight">
+                Do <span class="text-white">CLT</span> ao <span class="text-gold-500">Videomaker</span>
+            </h1>
+
+            <p class="text-xl md:text-2xl mb-6 max-w-2xl mx-auto text-white">
+                O passo a passo para sua liberdade criativa e financeira
+            </p>
+
+            <a href="#video" id="cta-initial">
+                Assista a Apresentação e Garanta sua Vaga
+            </a>
+        </div>
+    </section>
+
+
+    <section class="py-12 md:py-16 px-4 bg-navy-900" id="video">
+        <div class="max-w-4xl mx-auto border-2 border-gold-500 rounded-lg p-8 shadow-2xl">
+
+            <h3
+                class="text-2xl sm:text-3xl md:text-4xl text-center mt-2 mb-6 text-gold-500 font-bold leading-snug textvideo">
+                Assista como você pode transformar sua carreira
+            </h3>
+
+            <div class="aspect-video bg-black rounded-xl overflow-hidden mb-10 video-container relative">
+                <video id="vps-video-player" class="w-full h-full vps-video" controlsList="nodownload" preload="auto"
+                    poster="img/video-poster.jpg">
+                    <source src="sua-url-do-video.mp4" type="video/mp4">
+                    Seu navegador não suporta o elemento de vídeo.
+                </video>
+
+                <div id="video-overlay"
+                    class="absolute inset-0 cursor-pointer flex items-center justify-center bg-black bg-opacity-30">
+                    <button id="play-button"
+                        class="bg-gold-500 text-black p-4 rounded-full text-lg font-bold transition-all transform hover:scale-110">
+                        ▶ Iniciar Apresentação
+                    </button>
+                </div>
+            </div>
+
+            <div class="text-center mt-10">
+                <a href="#offer" id="cta-video-section"
+                    class="bg-gray-500 cursor-not-allowed text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform shadow-lg inline-block opacity-50"
+                    onclick="return false;">
+                    Conteúdo Liberado ao Final do Vídeo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div id="content-locked">
+
+        <section class="py-20 px-4 bg-dark-blue-500" id="aprender">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl text-center mb-12">O que você vai aprender</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="flex items-start">
+                        <i data-feather="check-circle" class="text-gold-500 mr-4 mt-1"></i>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Como encontrar seus primeiros clientes</h3>
+                            <p class="text-gray-300">Estratégias comprovadas para conseguir projetos mesmo sem
+                                experiência.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="check-circle" class="text-gold-500 mr-4 mt-1"></i>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Como criar um portfólio impressionante</h3>
+                            <p class="text-gray-300">Mesmo sem ter trabalhos profissionais para mostrar.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="check-circle" class="text-gold-500 mr-4 mt-1"></i>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Como fazer a transição do CLT com segurança</h3>
+                            <p class="text-gray-300">Planejamento financeiro e estratégias para minimizar riscos.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="check-circle" class="text-gold-500 mr-4 mt-1"></i>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Como se posicionar no mercado</h3>
+                            <p class="text-gray-300">Diferenciação e precificação para ganhar mais trabalhando menos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-12">
+                    <a href="#offer"
+                        class="bg-gold-500 hover:bg-gold-600 text-black font-bold py-3 px-8 rounded-full text-lg inline-block transition-all transform hover:scale-105">
+                        Quero minha vaga
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 px-4" id="autor">
+            <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+                <div class="rounded-lg overflow-hidden shadow-xl">
+                    <img src="http://static.photos/people/640x360/10" alt="Instrutor" class="w-full h-auto">
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold mb-6">Conheça quem já vive isso</h2>
+                    <p class="text-lg mb-4">Meu nome é Alef Almeida, e eu já estive exatamente onde você está agora.
+                        Trabalhava
+                        10 horas por dia em um escritório, sonhando com liberdade criativa e financeira.</p>
+                    <p class="text-lg mb-4">Hoje, vivo da minha paixão por vídeos, trabalho com grandes marcas e tenho
+                        total
+                        controle do meu tempo e da minha vida.</p>
+                    <p class="text-lg mb-6">Neste curso, vou te mostrar exatamente o caminho que percorri, com todos os
+                        acertos e erros, para que você possa chegar lá muito mais rápido.</p>
+                    <a href="#offer"
+                        class="bg-gold-500 hover:bg-gold-600 text-black font-bold py-3 px-8 rounded-full text-lg inline-block transition-all transform hover:scale-105">
+                        Quero ter liberdade
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="offer" class="py-20 px-4 bg-dark-blue-900">
+            <div class="max-w-2xl mx-auto border-2 border-gold-500 rounded-xl p-8">
+
+                <h2 class="text-2xl text-gold-500 font-bold text-center mb-4">Seu acesso ao curso Do CLT ao Videomaker
+                </h2>
+
+                <p class="text-center text-white mb-3 text-3xl font-semibold">
+                    De <s class="text-gold-900 opacity-80 text-4xl">R$197</s> por apenas
+                </p>
+
+                <div class="text-center mb-8 bg-dark-blue-800 border border-gold-500 rounded-xl py-6 px-4">
+
+                    <span class="text-6xl font-extrabold text-gold-500">
+                        R$97
+                    </span>
+
+                    <p class="text-white mt-3 text-2xl font-semibold">
+                        ou 12x de <span class="text-gold-500 font-bold">R$10,03</span> no cartão
+                    </p>
+
+                    <p class="text-red-400 font-bold mt-3 animate-pulse">
+                        Valor por tempo limitado
+                    </p>
+                </div>
+
+                <ul class="space-y-3 mb-8">
+                    <li class="flex items-center">
+                        <i data-feather="check" class="text-gold-500 mr-3"></i>
+                        <span>Acesso vitalício a todos os materiais</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i data-feather="check" class="text-gold-500 mr-3"></i>
+                        <span>Certificado de conclusão reconhecido no mercado</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i data-feather="check" class="text-gold-500 mr-3"></i>
+                        <span>Comunidade exclusiva de alunos</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i data-feather="check" class="text-gold-500 mr-3"></i>
+                        <span>Garantia incondicional de 7 dias</span>
+                    </li>
+                </ul>
+
+                <div class="text-center mb-6">
+                    <a href="#"
+                        class="bg-gold-500 hover:bg-dark-blue-500 hover:text-white text-black font-bold py-4 px-12 rounded-full text-lg inline-block transition-all duration-300 w-full">
+                        Comprar agora
+                    </a>
+                </div>
+
+                <div class="text-center text-sm">
+                    <p class="text-gold-500 mb-1">Vagas limitadas - Garanta seu acesso hoje</p>
+                    <p class="text-white">Pagamento 100% seguro</p>
+                </div>
+
+                <div class="flex justify-center mt-6 space-x-6">
+                    <i data-feather="credit-card" class="text-white"></i>
+                    <i data-feather="dollar-sign" class="text-white"></i>
+                    <i data-feather="bar-chart-2" class="text-white"></i>
+                </div>
+
+            </div>
+        </section>
+
+        <footer class="bg-black py-12 px-4 border-t border-dark-blue-900">
+            <div class="max-w-4xl mx-auto">
+                <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+                    <div class="mb-4 md:mb-0">
+                        <h3 class="text-2xl font-bold text-gold-500">Do CLT ao Videomaker</h3>
+                        <p class="text-gray-400 mt-2">Sua jornada para a liberdade criativa e financeira</p>
+                    </div>
+                    <a href="#offer"
+                        class="bg-gold-500 hover:bg-gold-600 text-black font-bold py-3 px-8 rounded-full text-lg transition-all transform hover:scale-105">
+                        Garanta sua vaga
+                    </a>
+                </div>
+
+                <div class="border-t border-gray-800 pt-8">
+                    <div class="flex flex-col md:flex-row justify-between items-center">
+                        <p class="text-gray-400 mb-4 md:mb-0">© 2025 Do CLT ao Videomaker. Todos os direitos reservados.
+                        </p>
+                        <div class="flex space-x-6">
+                            <a href="#" class="text-gray-400 hover:text-gold-500">Política de Privacidade</a>
+                            <a href="https://wa.me/55999882696" class="text-gray-400 hover:text-gold-500">Suporte</a>
+                            <a href="#" class="text-gray-400 hover:text-gold-500">Termos de Uso</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <a href="https://wa.me/55999882696" class="whatsapp-floating" target="_blank" aria-label="Whatsapp">
+        <img src="img/whatsapp-icon.png" alt="WhatsApp" />
+    </a>
+
+    <script>
+        feather.replace();
+
+        // 🎯 LÓGICA VPS: CONTROLE E LIBERAÇÃO DO CONTEÚDO
+        document.addEventListener('DOMContentLoaded', function () {
+            const videoPlayer = document.getElementById('vps-video-player');
+            const contentLocked = document.getElementById('content-locked');
+            const ctaVideoSection = document.getElementById('cta-video-section');
+            const videoOverlay = document.getElementById('video-overlay');
+            const playButton = document.getElementById('play-button');
+
+            // 1. Desabilita controles de avanço/retrocesso do player nativo
+            videoPlayer.initialTime = 0;
+
+            videoPlayer.onseeking = function () {
+                if (videoPlayer.currentTime > videoPlayer.initialTime) {
+                    videoPlayer.currentTime = videoPlayer.initialTime;
+                }
+            };
+            videoPlayer.ontimeupdate = function () {
+                videoPlayer.initialTime = videoPlayer.currentTime;
+            };
+
+            // 2. Controlar o Play/Pause e bloquear/desbloquear overlay
+            playButton.addEventListener('click', function () {
+                videoPlayer.play();
+                videoOverlay.style.display = 'none';
+            });
+
+            videoPlayer.addEventListener('pause', function () {
+                if (!videoPlayer.ended) {
+                    videoOverlay.style.display = 'flex';
+                }
+            });
+
+            // 3. Bloquear o clique no player (fora do botão)
+            videoOverlay.addEventListener('click', function (e) {
+                if (e.target.id !== 'play-button') {
+                    e.stopPropagation();
+                }
+            });
+
+
+            // 4. Liberar o restante da página ao final do vídeo
+            videoPlayer.addEventListener('ended', function () {
+                contentLocked.style.display = 'block';
+
+                ctaVideoSection.classList.remove('bg-gray-500', 'cursor-not-allowed', 'opacity-50', 'text-white');
+                ctaVideoSection.classList.add('bg-gold-500', 'hover:bg-gold-600', 'text-navy-900', 'transform', 'hover:scale-105');
+                ctaVideoSection.setAttribute('href', '#offer');
+                ctaVideoSection.removeAttribute('onclick');
+                ctaVideoSection.innerHTML = 'Quero começar agora';
+
+                document.getElementById('aprender').scrollIntoView({ behavior: 'smooth' });
+
+                document.getElementById('cta-initial').setAttribute('href', '#offer');
+            });
+
+            videoPlayer.setAttribute('controls', 'true');
+            videoPlayer.oncontextmenu = () => false;
+        });
+    </script>
+</body>
+
+</html>
